@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*
+header
+*/
+.header .header-top {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header-top .header-top__title {
+  font-size: 1.3rem;
+  margin: 10px 0 0 10px;
+}
+.header .header-mv {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*
+main
+*/
+.main {
+  /*
+  共通設定
+  */
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  /*
+  about
+  */
+  /*
+  next-event
+  */
+  /*
+  store
+  */
+  /*
+  parking
+  */
+}
+.main section {
+  margin-top: 50px;
+}
+.main section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.main section p {
+  font-size: 0.8rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+  letter-spacing: 0.3rem;
+  text-align: left;
+}
+.main .about .about-block__img {
+  width: 120%;
+  height: 300px;
+  margin-top: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .next-event h2 {
+  text-align: center;
+}
+.main .next-event p {
+  text-align: center;
+}
+.main .store {
+  width: 100%;
+}
+.main .store .store-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main .store .store-block {
+  width: 50%;
+  padding-top: 30px;
+}
+.main .store .store-block__img {
+  width: 90%;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .store .store-block__body {
+  width: 90%;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main .store .store-block__body .store-block__name {
+  padding-top: 5px;
+  text-align: left;
+  font-size: 0.8rem;
+}
+.main .store .store-block__body .store-block__text {
+  margin-top: 5px;
+  font-size: 0.6rem;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.2rem;
+}
+.main .parking {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #125135;
+}
+.main .parking h2 {
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.main .parking .parking__img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 30px;
+}
+.main .parking .parking__detail {
+  display: flex;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  color: #fff;
+}
+.main .parking .parking__detail .parking__box_left {
+  width: 25%;
+  border-top: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+  border-left: 1.5px solid #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.main .parking .parking__detail .parking__box_left .parking__icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  line-height: 50px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 5px 0 12px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+}
+.main .parking .parking__detail .parking__box_right {
+  width: 75%;
+  border-top: 1.5px solid #fff;
+  border-right: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+  display: flex;
+  align-items: center;
+}
+.main .parking .parking__detail .parking__text {
+  font-weight: 400;
+  font-size: 0.6rem;
+  margin-top: 0;
+  padding: 5px 0 5px 0;
+  text-align: left;
+  line-height: 1.2rem;
+}/*# sourceMappingURL=style.css.map */
