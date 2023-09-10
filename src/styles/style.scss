@@ -27,7 +27,7 @@ main----------------------------------------------------
   /*
   共通設定
   */
-  width: 90%;
+  width: 82%;
   margin: 0 auto;
   text-align: center;
 
@@ -79,7 +79,7 @@ main----------------------------------------------------
     & .next-event-block {
       position: relative;
       padding-top: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 40px;
       & .next-event-block__day {
         font-size: 2.0rem;
       }
@@ -100,8 +100,8 @@ main----------------------------------------------------
         display: block;
         width: 10%;
         height: 20%;
-        border-top: 2px solid #125135;
-        border-left:  2px solid #125135;
+        border-top: thick double #125135;
+        border-left: thick double #125135;
       }
       & .next-event-block__topright {
         position: absolute;
@@ -111,8 +111,8 @@ main----------------------------------------------------
         display: block;
         width: 10%;
         height: 20%;
-        border-top: 2px solid #125135;
-        border-right:  2px solid #125135;
+        border-top: thick double #125135;
+        border-right:  thick double #125135;
       }
       & .next-event-block__bottomright {
         position: absolute;
@@ -122,8 +122,8 @@ main----------------------------------------------------
         display: block;
         width: 10%;
         height: 20%;
-        border-bottom: 2px solid #125135;
-        border-right:  2px solid #125135;
+        border-bottom: thick double #125135;
+        border-right:  thick double #125135;
       }
       & .next-event-block__bottomleft {
         position: absolute;
@@ -133,8 +133,8 @@ main----------------------------------------------------
         display: block;
         width: 10%;
         height: 20%;
-        border-bottom: 2px solid #125135;
-        border-left:  2px solid #125135;
+        border-bottom: thick double #125135;
+        border-left:  thick double #125135;
       }
     }
 
@@ -175,17 +175,17 @@ main----------------------------------------------------
       overflow: hidden;
 
       & .store-block__name {
-        padding-top: 5px;
+        padding-top: 8px;
         text-align: left;
         font-size: 0.8rem;
       }
 
       & .store-block__text {
-        margin-top: 5px;
+        margin-top: 8px;
         font-size: 0.6rem;
         font-weight: 400;
-        line-height: 0.8rem;
-        letter-spacing: 0.2rem;
+        line-height: 0.9rem;
+        letter-spacing: 0.1rem;
         word-wrap: break-word;
       }
     }
@@ -207,14 +207,14 @@ main----------------------------------------------------
     }
 
     & .parking__img {
-      width: 90%;
+      width: 82%;
       object-fit: cover;
       margin-bottom: 30px;
     }
 
     & .parking__detail {
       display: flex;
-      width: 90%;
+      width: 82%;
       height: 100px;
       margin: 0 auto;
       color: #fff;
