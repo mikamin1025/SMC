@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-header
+header----------------------------------------------------
 */
 .header .header-top {
   position: fixed;
@@ -19,7 +19,7 @@ header
 }
 
 /*
-main
+main----------------------------------------------------
 */
 .main {
   /*
@@ -29,16 +29,16 @@ main
   margin: 0 auto;
   text-align: center;
   /*
-  about
+  about----------------------------------------------------
   */
   /*
-  next-event
+  next-event----------------------------------------------------
   */
   /*
-  store
+  store----------------------------------------------------
   */
   /*
-  parking
+  parking----------------------------------------------------
   */
 }
 .main section {
@@ -53,7 +53,7 @@ main
   line-height: 2.5rem;
   font-weight: 600;
   margin-top: 20px;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   text-align: left;
 }
 .main .about .about-block__img {
@@ -65,12 +65,77 @@ main
 }
 .main .next-event h2 {
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .main .next-event p {
   text-align: center;
 }
+.main .next-event .next-event-block {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /*装飾*/
+}
+.main .next-event .next-event-block .next-event-block__day {
+  font-size: 2rem;
+}
+.main .next-event .next-event-block .next-event-block__time {
+  line-height: 1.3rem;
+}
+.main .next-event .next-event-block .next-event-block__place {
+  line-height: 1.3rem;
+}
+.main .next-event .next-event-block .next-event-block__topleft {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 10%;
+  height: 20%;
+  border-top: 2px solid #125135;
+  border-left: 2px solid #125135;
+}
+.main .next-event .next-event-block .next-event-block__topright {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  display: block;
+  width: 10%;
+  height: 20%;
+  border-top: 2px solid #125135;
+  border-right: 2px solid #125135;
+}
+.main .next-event .next-event-block .next-event-block__bottomright {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 10%;
+  height: 20%;
+  border-bottom: 2px solid #125135;
+  border-right: 2px solid #125135;
+}
+.main .next-event .next-event-block .next-event-block__bottomleft {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 10%;
+  height: 20%;
+  border-bottom: 2px solid #125135;
+  border-left: 2px solid #125135;
+}
 .main .store {
   width: 100%;
+}
+.main .store h2 {
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 .main .store .store-container {
   display: flex;
@@ -89,7 +154,7 @@ main
 }
 .main .store .store-block__body {
   width: 90%;
-  height: 150px;
+  height: 100px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -102,8 +167,9 @@ main
   margin-top: 5px;
   font-size: 0.6rem;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 0.8rem;
   letter-spacing: 0.2rem;
+  word-wrap: break-word;
 }
 .main .parking {
   width: 100vw;
@@ -113,8 +179,8 @@ main
 }
 .main .parking h2 {
   color: #fff;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .main .parking .parking__img {
   width: 90%;
@@ -131,7 +197,6 @@ main
 }
 .main .parking .parking__detail .parking__box_left {
   width: 25%;
-  border-top: 1.5px solid #fff;
   border-bottom: 1.5px solid #fff;
   border-left: 1.5px solid #fff;
   text-align: center;
@@ -150,13 +215,18 @@ main
   border: 1.5px solid #fff;
   border-radius: 50%;
 }
+.main .parking .parking__detail .parking__box_left-first {
+  border-top: 1.5px solid #fff;
+}
 .main .parking .parking__detail .parking__box_right {
   width: 75%;
-  border-top: 1.5px solid #fff;
   border-right: 1.5px solid #fff;
   border-bottom: 1.5px solid #fff;
   display: flex;
   align-items: center;
+}
+.main .parking .parking__detail .parking__box_right-first {
+  border-top: 1.5px solid #fff;
 }
 .main .parking .parking__detail .parking__text {
   font-weight: 400;
