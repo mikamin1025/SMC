@@ -6,6 +6,7 @@ header----------------------------------------------------
   position: fixed;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 .header .header-top .header-top__title {
   font-size: 1.3rem;
@@ -72,6 +73,7 @@ main----------------------------------------------------
   margin-top: 30px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
 }
 .main .next-event h2 {
   text-align: center;
@@ -106,6 +108,7 @@ main----------------------------------------------------
   height: 20%;
   border-top: thick double #125135;
   border-left: thick double #125135;
+  border-top-left-radius: 20px;
 }
 .main .next-event .next-event-block .next-event-block__topright {
   position: absolute;
@@ -117,6 +120,7 @@ main----------------------------------------------------
   height: 20%;
   border-top: thick double #125135;
   border-right: thick double #125135;
+  border-top-right-radius: 20px;
 }
 .main .next-event .next-event-block .next-event-block__bottomright {
   position: absolute;
@@ -128,6 +132,7 @@ main----------------------------------------------------
   height: 20%;
   border-bottom: thick double #125135;
   border-right: thick double #125135;
+  border-bottom-right-radius: 20px;
 }
 .main .next-event .next-event-block .next-event-block__bottomleft {
   position: absolute;
@@ -139,6 +144,7 @@ main----------------------------------------------------
   height: 20%;
   border-bottom: thick double #125135;
   border-left: thick double #125135;
+  border-bottom-left-radius: 20px;
 }
 .main .store {
   width: 100%;
@@ -161,6 +167,7 @@ main----------------------------------------------------
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
 }
 .main .store .store-block__body {
   width: 90%;
@@ -186,6 +193,7 @@ main----------------------------------------------------
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   background-color: #125135;
+  border-radius: 20px;
 }
 .main .parking h2 {
   color: #fff;
@@ -197,6 +205,7 @@ main----------------------------------------------------
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 30px;
+  border-radius: 20px;
 }
 .main .parking .parking__detail {
   display: flex;
@@ -227,6 +236,7 @@ main----------------------------------------------------
 }
 .main .parking .parking__detail .parking__box_left-first {
   border-top: 1.5px solid #fff;
+  border-top-left-radius: 20px;
 }
 .main .parking .parking__detail .parking__box_right {
   width: 75%;
@@ -237,6 +247,7 @@ main----------------------------------------------------
 }
 .main .parking .parking__detail .parking__box_right-first {
   border-top: 1.5px solid #fff;
+  border-top-right-radius: 20px;
 }
 .main .parking .parking__detail .parking__text {
   font-weight: 400;
