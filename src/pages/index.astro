@@ -25,7 +25,7 @@ import Layout from "../layouts/Layout.astro";
         </p>
         <img
           class="about-block__img"
-          src="/images/picture02.jpg"
+          src="../../public/images/picture02.jpg"
           alt="イベントの雰囲気が分かる画像"
         />
       </div>
@@ -33,6 +33,10 @@ import Layout from "../layouts/Layout.astro";
     <section class="next-event">
       <h2>NEXT EVENT</h2>
       <div class="next-event-block">
+        <span class="next-event-block__topleft"></span>
+        <span class="next-event-block__topright"></span>
+        <span class="next-event-block__bottomright"></span>
+        <span class="next-event-block__bottomleft"></span>
         <p class="next-event-block__day">2023.10.25</p>
         <p class="next-event-block__time">10:00-17:00</p>
         <p class="next-event-block__place">@出雲市役所芝生エリア</p>
@@ -43,7 +47,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="store-container">
         <div class="store-block">
           <img
-            src="/images/picture04.jpg"
+            src="../../public//images/picture04.jpg"
             alt=""
             class="store-block__img"
           />
@@ -61,7 +65,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="store-block">
           <img
-            src="/images/picture04.jpg"
+            src="../../public//images/picture04.jpg"
             alt=""
             class="store-block__img"
           />
@@ -79,7 +83,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="store-block">
           <img
-            src="/images/picture04.jpg"
+            src="../../public//images/picture04.jpg"
             alt=""
             class="store-block__img"
           />
@@ -97,7 +101,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="store-block">
           <img
-            src="/images/picture04.jpg"
+            src="../../public//images/picture04.jpg"
             alt=""
             class="store-block__img"
           />
@@ -115,8 +119,8 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="store-block">
           <img
-            src="/images/picture04.jpg"
-            alt=""
+            src="../../public/images/picture04.jpg"
+            alt="お店のイメージ画像"
             class="store-block__img"
           />
           <div class="store-block__body">
@@ -141,10 +145,10 @@ import Layout from "../layouts/Layout.astro";
         class="parking__img"
       />
       <div class="parking__detail">
-        <div class="parking__box_left">
+        <div class="parking__box_left parking__box_left-first">
           <p class="parking__icon">P1</p>
         </div>
-        <div class="parking__box_right">
+        <div class="parking__box_right  parking__box_right-first">
           <p class="parking__text">
             市役所西側駐車場（６区画の斜線区画は市役所の土日窓口専用のため使用できません）
           </p>
