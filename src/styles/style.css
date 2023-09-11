@@ -1,16 +1,79 @@
 @charset "UTF-8";
-/*
-header----------------------------------------------------
-*/
+/*****************************************
+header
+******************************************/
+.header {
+  /*========= スクロールダウンのためのCSS ===============*/
+  /*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
+  /*スクロールダウン全体の場所*/
+  /*下からの距離が変化して全体が下→上→下に動く*/
+  /*Scrollテキストの描写*/
+  /* 矢印の描写 */
+  /*========= レイアウトのためのCSS ===============*/
+}
 .header .header-top {
+  width: 100%;
   position: fixed;
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  /*========= レイアウトのためのCSS ===============*/
+  /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+  /*========= レイアウトのためのCSS ===============*/
 }
 .header .header-top .header-top__title {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
   font-size: 1.3rem;
-  margin: 10px 0 0 10px;
+  padding-left: 20px;
+}
+.header .header-top .header-top__hamburger {
+  position: relative;
+  /*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+  width: 70px;
+  height: 50px;
+  border-radius: 5px;
+  /*ボタン内側*/
+  /*activeクラスが付与されると線が回転して×になる*/
+}
+.header .header-top .header-top__hamburger span {
+  display: inline-block;
+  transition: all 0.4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #125135;
+}
+.header .header-top .header-top__hamburger span:nth-of-type(1) {
+  top: 15px;
+  width: 45%;
+}
+.header .header-top .header-top__hamburger span:nth-of-type(2) {
+  top: 23px;
+  width: 35%;
+}
+.header .header-top .header-top__hamburger span:nth-of-type(3) {
+  top: 31px;
+  width: 20%;
+}
+.header .header-top .header-top__hamburger.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-135deg);
+  width: 30%;
+}
+.header .header-top .header-top__hamburger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.header .header-top .header-top__hamburger.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(135deg);
+  width: 30%;
 }
 .header .header-mv {
   position: relative;
@@ -28,10 +91,64 @@ header----------------------------------------------------
   height: 100vh;
   background: linear-gradient(to bottom, transparent 0%, transparent 70%, #ede3da 100%);
 }
+.header .header-scrolldown {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  bottom: 1%;
+  right: 50%;
+  /*矢印の動き1秒かけて永遠にループ*/
+  animation: arrowmove 1s ease-in-out infinite;
+}
+@keyframes arrowmove {
+  0% {
+    bottom: 1%;
+  }
+  50% {
+    bottom: 3%;
+  }
+  100% {
+    bottom: 1%;
+  }
+}
+.header .header-scrolldown span {
+  /*描画位置*/
+  position: absolute;
+  left: -20px;
+  bottom: 10px;
+  /*テキストの形状*/
+  color: #555;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  writing-mode: vertical-rl;
+}
+.header .header-scrolldown:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: -6px;
+  /*矢印の形状*/
+  width: 1px;
+  height: 20px;
+  background: #555;
+  transform: skewX(-31deg);
+}
+.header .header-scrolldown:after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*矢印の形状*/
+  width: 1px;
+  height: 50px;
+  background: #555;
+}
 
-/*
-main----------------------------------------------------
-*/
+/*****************************************
+main
+*******************************************/
 .main {
   /*
   共通設定
@@ -192,6 +309,7 @@ main----------------------------------------------------
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+  padding-bottom: 40px;
   background-color: #125135;
   border-radius: 20px;
 }
@@ -238,6 +356,9 @@ main----------------------------------------------------
   border-top: 1.5px solid #fff;
   border-top-left-radius: 20px;
 }
+.main .parking .parking__detail .parking__box_left-last {
+  border-bottom-left-radius: 20px;
+}
 .main .parking .parking__detail .parking__box_right {
   width: 75%;
   border-right: 1.5px solid #fff;
@@ -249,6 +370,9 @@ main----------------------------------------------------
   border-top: 1.5px solid #fff;
   border-top-right-radius: 20px;
 }
+.main .parking .parking__detail .parking__box_right-last {
+  border-bottom-right-radius: 20px;
+}
 .main .parking .parking__detail .parking__text {
   font-weight: 400;
   font-size: 0.6rem;
@@ -256,4 +380,35 @@ main----------------------------------------------------
   padding: 5px 0 5px 0;
   text-align: left;
   line-height: 1.2rem;
+}
+
+/*****************************************
+footer
+******************************************/
+.footer {
+  width: 80%;
+  margin: 0 auto;
+}
+.footer .footer-block-nav {
+  margin-top: 40px;
+}
+.footer .footer-block-nav .footer-block-nav__text {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #125135;
+  margin-top: 20px;
+}
+.footer .footer-block-sns {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.footer .footer-block-sns .footer-block-sns__icon {
+  font-size: 4rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #125135;
+  margin-top: 20px;
+  margin-right: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,21 +1,91 @@
+@charset "utf-8";
 $border-radius: 20px;
 
-/*
-header----------------------------------------------------
-*/
+/*****************************************
+header
+******************************************/
 .header {
-  
-  
   & .header-top {
+    width: 100%;
     position: fixed;
     display: flex;
     justify-content: space-between;
     z-index: 10;
-    
+
     & .header-top__title {
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
       font-size: 1.3rem;
-      margin: 10px 0 0 10px;
+      padding-left: 20px;
     }
+
+    /*========= レイアウトのためのCSS ===============*/
+    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+    & .header-top__hamburger {
+      position: relative;
+      /*ボタン内側の基点となるためrelativeを指定*/
+      cursor: pointer;
+      width: 70px;
+      height: 50px;
+      border-radius: 5px;
+
+      /*ボタン内側*/
+      & span {
+        display: inline-block;
+        transition: all .4s;
+        /*アニメーションの設定*/
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background: #125135;
+      }
+
+
+      & span:nth-of-type(1) {
+        top: 15px;
+        width: 45%;
+      }
+
+      & span:nth-of-type(2) {
+        top: 23px;
+        width: 35%;
+      }
+
+      & span:nth-of-type(3) {
+        top: 31px;
+        width: 20%;
+      }
+
+      /*activeクラスが付与されると線が回転して×になる*/
+
+      &.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-135deg);
+        width: 30%;
+      }
+
+      &.active span:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(135deg);
+        width: 30%;
+      }
+    }
+
+
+
+
+
+    /*========= レイアウトのためのCSS ===============*/
+
+
   }
 
   & .header-mv {
@@ -24,7 +94,7 @@ header----------------------------------------------------
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-  
+
   }
 
   & .header-overlay {
@@ -36,12 +106,86 @@ header----------------------------------------------------
     background: linear-gradient(to bottom, transparent 0%, transparent 70%, #ede3da 100%)
   }
 
+  /*========= スクロールダウンのためのCSS ===============*/
+
+
+  /*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
+
+  /*スクロールダウン全体の場所*/
+  & .header-scrolldown {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    bottom: 1%;
+    right: 50%;
+    /*矢印の動き1秒かけて永遠にループ*/
+    animation: arrowmove 1s ease-in-out infinite;
+  }
+
+  /*下からの距離が変化して全体が下→上→下に動く*/
+  @keyframes arrowmove {
+    0% {
+      bottom: 1%;
+    }
+
+    50% {
+      bottom: 3%;
+    }
+
+    100% {
+      bottom: 1%;
+    }
+  }
+
+  /*Scrollテキストの描写*/
+  & .header-scrolldown span {
+    /*描画位置*/
+    position: absolute;
+    left: -20px;
+    bottom: 10px;
+    /*テキストの形状*/
+    color: #555;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+
+  /* 矢印の描写 */
+  & .header-scrolldown:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+    /*矢印の形状*/
+    width: 1px;
+    height: 20px;
+    background: #555;
+    transform: skewX(-31deg);
+  }
+
+  & .header-scrolldown:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*矢印の形状*/
+    width: 1px;
+    height: 50px;
+    background: #555;
+  }
+
+  /*========= レイアウトのためのCSS ===============*/
+
 
 }
 
-/*
-main----------------------------------------------------
-*/
+/*****************************************
+main
+*******************************************/
 .main {
   /*
   共通設定
@@ -100,13 +244,16 @@ main----------------------------------------------------
       position: relative;
       padding-top: 20px;
       padding-bottom: 40px;
+
       & .next-event-block__day {
         font-size: 2.0rem;
       }
+
       & .next-event-block__time {
         // font-size: 1.3rem;
         line-height: 1.3rem;
       }
+
       & .next-event-block__place {
         line-height: 1.3rem;
       }
@@ -124,6 +271,7 @@ main----------------------------------------------------
         border-left: thick double #125135;
         border-top-left-radius: $border-radius;
       }
+
       & .next-event-block__topright {
         position: absolute;
         content: "";
@@ -133,9 +281,10 @@ main----------------------------------------------------
         width: 10%;
         height: 20%;
         border-top: thick double #125135;
-        border-right:  thick double #125135;
+        border-right: thick double #125135;
         border-top-right-radius: $border-radius;
       }
+
       & .next-event-block__bottomright {
         position: absolute;
         content: "";
@@ -145,9 +294,10 @@ main----------------------------------------------------
         width: 10%;
         height: 20%;
         border-bottom: thick double #125135;
-        border-right:  thick double #125135;
+        border-right: thick double #125135;
         border-bottom-right-radius: $border-radius;
       }
+
       & .next-event-block__bottomleft {
         position: absolute;
         content: "";
@@ -157,7 +307,7 @@ main----------------------------------------------------
         width: 10%;
         height: 20%;
         border-bottom: thick double #125135;
-        border-left:  thick double #125135;
+        border-left: thick double #125135;
         border-bottom-left-radius: $border-radius;
       }
     }
@@ -223,6 +373,7 @@ main----------------------------------------------------
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
+    padding-bottom: 40px;
     background-color: #125135;
     border-radius: $border-radius;
 
@@ -268,9 +419,14 @@ main----------------------------------------------------
 
         }
       }
+
       & .parking__box_left-first {
         border-top: 1.5px solid #fff;
         border-top-left-radius: $border-radius;
+      }
+
+      & .parking__box_left-last {
+        border-bottom-left-radius: $border-radius;
       }
 
       & .parking__box_right {
@@ -280,10 +436,16 @@ main----------------------------------------------------
         display: flex;
         align-items: center;
       }
+
       & .parking__box_right-first {
-        border-top: 1.5px solid #fff; 
+        border-top: 1.5px solid #fff;
         border-top-right-radius: $border-radius;
       }
+
+      & .parking__box_right-last {
+        border-bottom-right-radius: $border-radius;
+      }
+
       & .parking__text {
         font-weight: 400;
         font-size: 0.6rem;
@@ -293,9 +455,41 @@ main----------------------------------------------------
         line-height: 1.2rem;
       }
     }
+  }
+}
 
+/*****************************************
+footer
+******************************************/
+.footer {
+  width: 80%;
+  margin: 0 auto;
+
+  & .footer-block-nav {
+    margin-top: 40px;
+
+    & .footer-block-nav__text {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #125135;
+      margin-top: 20px;
+    }
   }
 
+  & .footer-block-sns {
+    margin-top: 40px;
+    margin-bottom: 40px;
 
+    & .footer-block-sns__icon {
+      font-size: 4.0rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #125135;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+  }
 
 }
