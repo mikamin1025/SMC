@@ -8,10 +8,11 @@ import Layout from "../layouts/Layout.astro";
       <div class="header-top__title">
         <h1>SUNDAY MARKET CiBO</h1>
       </div>
-      <div class="header-top__hamburger"></div>
+      <div class="header-top__hamburger"><span></span><span></span><span></span></div>
     </div>
     <img class="header-mv" src="images/mv.jpg" alt="メイン画像" />
     <div class="header-overlay"></div>
+    <div class="header-scrolldown"><span>Scroll</span></div>
   </header>
   <main class="main">
     <section class="about">
@@ -145,7 +146,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="parking__box_left parking__box_left-first">
           <p class="parking__icon">P1</p>
         </div>
-        <div class="parking__box_right  parking__box_right-first">
+        <div class="parking__box_right parking__box_right-first">
           <p class="parking__text">
             市役所西側駐車場（６区画の斜線区画は市役所の土日窓口専用のため使用できません）
           </p>
@@ -160,14 +161,25 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <div class="parking__detail">
-        <div class="parking__box_left">
+        <div class="parking__box_left parking__box_left-last">
           <p class="parking__icon">P3</p>
         </div>
-        <div class="parking__box_right">
+        <div class="parking__box_right parking__box_right-last">
           <p class="parking__text">中央保育所北側駐車場</p>
         </div>
       </div>
     </section>
   </main>
-  <footer></footer>
+  <footer class="footer">
+    <div class="footer-block-nav">
+      <a href="#" class="footer-block-nav__text">ABOUT</a>
+      <a href="#" class="footer-block-nav__text">NEXT EVENT</a>
+      <a href="#" class="footer-block-nav__text">STORE</a>
+      <a href="#" class="footer-block-nav__text">PARKING</a>
+    </div>
+    <div class="footer-block-sns">
+      <a href="#" class="footer-block-sns__icon"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#" class="footer-block-sns__icon"><i class="fa-brands fa-square-instagram"></i></a>
+    </div>
+  </footer>
 </Layout>
