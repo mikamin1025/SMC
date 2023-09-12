@@ -8,7 +8,17 @@ import Layout from "../layouts/Layout.astro";
       <div class="header-top__title">
         <h1>SUNDAY MARKET CiBO</h1>
       </div>
-      <div class="header-top__hamburger"><span></span><span></span><span></span></div>
+      <!-- ハンバーガーメニュー -->
+      <div class="header-top__hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="header-top__menu">
+        <div class="header-top__menu-item"><a href="">ABOUT</a></div>
+        <div class="header-top__menu-item"><a href="">NEXT EVENT</a></div>
+        <div class="header-top__menu-item"><a href="">STORE</a></div>
+        <div class="header-top__menu-item"><a href="">PARKING</a></div>
+      </div>
+      <!-- ハンバーガーメニュー -->
     </div>
     <img class="header-mv" src="images/mv.jpg" alt="メイン画像" />
     <div class="header-overlay"></div>
@@ -25,7 +35,11 @@ import Layout from "../layouts/Layout.astro";
         <p class="about-block__text">
           出店者さんの多くは出雲市内の農家さんや食に関わっている方々で、CiBOのメンバー自ら出店してもらえる生産者さんと直接やり取りを行い、信頼関係を築きながら、安心安全なものを提供いただいている
         </p>
-        <img class="about-block__img" src="images/picture02.jpg" alt="イベントの雰囲気が分かる画像"/>
+        <img
+          class="about-block__img"
+          src="images/picture02.jpg"
+          alt="イベントの雰囲気が分かる画像"
+        />
       </div>
     </section>
     <section class="next-event">
@@ -44,11 +58,7 @@ import Layout from "../layouts/Layout.astro";
       <h2>STORE</h2>
       <div class="store-container">
         <div class="store-block">
-          <img
-            src="images/picture04.jpg"
-            alt=""
-            class="store-block__img"
-          />
+          <img src="images/picture04.jpg" alt="" class="store-block__img" />
           <div class="store-block__body">
             <h3 class="store-block__name">THE COFFEE SHOP</h3>
             <p class="store-block__text">
@@ -59,6 +69,9 @@ import Layout from "../layouts/Layout.astro";
               SHOPにぜひお越しください。こんにちは。THE COFFEE
               SHOPにぜひお越しください。
             </p>
+          </div>
+          <div class="store-block__detail">
+            <p class="store-block__detail-back">◀ BACK</p>
           </div>
         </div>
         <div class="store-block">
@@ -137,11 +150,7 @@ import Layout from "../layouts/Layout.astro";
     </section>
     <section class="parking">
       <h2>PARKING</h2>
-      <img
-        src="images/parking.png"
-        alt="地図の画像"
-        class="parking__img"
-      />
+      <img src="images/parking.png" alt="地図の画像" class="parking__img" />
       <div class="parking__detail">
         <div class="parking__box_left parking__box_left-first">
           <p class="parking__icon">P1</p>
@@ -178,8 +187,34 @@ import Layout from "../layouts/Layout.astro";
       <a href="#" class="footer-block-nav__text">PARKING</a>
     </div>
     <div class="footer-block-sns">
-      <a href="#" class="footer-block-sns__icon"><i class="fa-brands fa-square-facebook"></i></a>
-      <a href="#" class="footer-block-sns__icon"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="#" class="footer-block-sns__icon"
+        ><i class="fa-brands fa-square-facebook"></i></a
+      >
+      <a href="#" class="footer-block-sns__icon"
+        ><i class="fa-brands fa-square-instagram"></i></a
+      >
     </div>
   </footer>
+  <script>
+    const humburger = document.querySelector(".header-top__hamburger");
+    const menu = document.querySelector(".header-top__menu");
+    humburger.addEventListener("click", () => {
+      humburger.classList.toggle("active");
+      menu.classList.toggle("is-active");
+    });
+    menu.addEventListener("click", () => {
+      humburger.classList.remove("active");
+      menu.classList.remove("is-active");
+    });
+
+    const stores = document.querySelectorAll(".store-block");
+    const detail = document.querySelector(".store-block__detail");
+    stores.forEach((store) => {
+      store.addEventListener("click", () => {
+        detail.classList.toggle("is-active");
+      });
+    });
+
+    
+  </script>
 </Layout>
