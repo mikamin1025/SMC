@@ -29,6 +29,7 @@ header
       width: 70px;
       height: 50px;
       border-radius: 5px;
+      z-index: 30;
 
       /*ボタン内側*/
       & span {
@@ -79,11 +80,57 @@ header
       }
     }
 
-
-
-
-
     /*========= レイアウトのためのCSS ===============*/
+    /*----------------------------
+* メニュー本体
+*----------------------------*/
+    & .header-top__menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 20;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ede3da;
+
+      & .header-top__menu-item {
+        width: 100%;
+        height: auto;
+        padding: 1.5rem 1em;
+        text-align: center;
+        box-sizing: border-box;
+
+        & a {
+          color: #125135;
+          text-decoration: none;
+          font-size: 1.5rem;
+          padding: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    /*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+    /* アニメーション前のメニューの状態 */
+    & .header-top__menu {
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .3s linear;
+
+      /* アニメーション後のメニューの状態 */
+      &.is-active {
+        pointer-events: auto;
+        opacity: 1;
+      }
+    }
+
 
 
   }
@@ -118,7 +165,7 @@ header
     bottom: 1%;
     right: 50%;
     /*矢印の動き1秒かけて永遠にループ*/
-    animation: arrowmove 1s ease-in-out infinite;
+    animation: arrowmove 1.5s ease-in-out infinite;
   }
 
   /*下からの距離が変化して全体が下→上→下に動く*/
@@ -143,7 +190,7 @@ header
     left: -20px;
     bottom: 10px;
     /*テキストの形状*/
-    color: #555;
+    color: #333;
     font-size: 0.7rem;
     letter-spacing: 0.05em;
     /*縦書き設定*/
@@ -333,35 +380,73 @@ main
 
     & .store-block {
       width: 50%;
-      padding-top: 30px;
-    }
+      padding-top: 40px;
 
-    & .store-block__img {
-      width: 90%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: $border-radius;
-    }
-
-    & .store-block__body {
-      width: 90%;
-      height: 100px;
-      margin: 0 auto;
-      overflow: hidden;
-
-      & .store-block__name {
-        padding-top: 8px;
-        text-align: left;
-        font-size: 0.8rem;
+      & .store-block__img {
+        width: 90%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: $border-radius;
       }
 
-      & .store-block__text {
-        margin-top: 8px;
-        font-size: 0.6rem;
-        font-weight: 400;
-        line-height: 0.9rem;
-        letter-spacing: 0.1rem;
-        word-wrap: break-word;
+      & .store-block__body {
+        width: 90%;
+        height: 100px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        & .store-block__name {
+          padding-top: 8px;
+          text-align: left;
+          font-size: 0.8rem;
+        }
+
+        & .store-block__text {
+          margin-top: 8px;
+          font-size: 0.6rem;
+          font-weight: 400;
+          line-height: 0.9rem;
+          letter-spacing: 0.1rem;
+          word-wrap: break-word;
+        }
+      }
+
+      /*----------------------------
+* メニュー本体
+*----------------------------*/
+      & .store-block__detail {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 20;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #ede3da;
+        
+
+        & .store-block__detail-item {}
+      }
+
+
+
+      /*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+      /* アニメーション前のメニューの状態 */
+      & .store-block__detail {
+        transform: translateX(100vw);
+        transition: all .2s linear;
+      }
+
+      /* アニメーション後のメニューの状態 */
+      & .store-block__detail.is-active {
+        transform: translateX(0);
+        border-left: 1px solid #555;
       }
     }
   }
