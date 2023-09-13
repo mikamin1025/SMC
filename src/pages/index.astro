@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import StoreDetail from "../components/StoreDetail.astro";
 ---
 
 <Layout title="SUNDAY MARKET CiBO">
@@ -49,16 +50,20 @@ import Layout from "../layouts/Layout.astro";
         <span class="next-event-block__topright"></span>
         <span class="next-event-block__bottomright"></span>
         <span class="next-event-block__bottomleft"></span>
-        <p class="next-event-block__day">2023.10.25</p>
+        <p class="next-event-block__day">2023.10.25 wed</p>
         <p class="next-event-block__time">10:00-17:00</p>
         <p class="next-event-block__place">@出雲市役所芝生エリア</p>
       </div>
     </section>
     <section class="store">
-      <h2>STORE</h2>
+      <h2>STORES</h2>
       <div class="store-container">
         <div class="store-block">
-          <img src="images/picture04.jpg" alt="" class="store-block__img" />
+          <img
+            src="images/picture04.jpg"
+            alt="店の画像"
+            class="store-block__img"
+          />
           <div class="store-block__body">
             <h3 class="store-block__name">THE COFFEE SHOP</h3>
             <p class="store-block__text">
@@ -70,10 +75,13 @@ import Layout from "../layouts/Layout.astro";
               SHOPにぜひお越しください。
             </p>
           </div>
-          <div class="store-block__detail">
-            <p class="store-block__detail-back">◀ BACK</p>
-          </div>
         </div>
+        <StoreDetail storeInfo={}>
+
+        </StoreDetail>
+        
+
+        <!-- 後から消すエリア↓↓ -->
         <div class="store-block">
           <img
             src="images/picture04.jpg"
@@ -146,6 +154,7 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </div>
         </div>
+        <!-- 後から消すエリア↑↑ -->
       </div>
     </section>
     <section class="parking">
@@ -208,13 +217,15 @@ import Layout from "../layouts/Layout.astro";
     });
 
     const stores = document.querySelectorAll(".store-block");
-    const detail = document.querySelector(".store-block__detail");
+    const detail = document.querySelector(".store-detail");
+    const back = document.querySelector(".store-detail-back");
     stores.forEach((store) => {
       store.addEventListener("click", () => {
-        detail.classList.toggle("is-active");
+        detail.classList.add("is-active");
       });
     });
-
-    
+    back.addEventListener("click", () => {
+      detail.classList.remove("is-active");
+    });
   </script>
 </Layout>
