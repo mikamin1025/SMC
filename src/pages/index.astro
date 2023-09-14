@@ -16,12 +16,20 @@ import StoreDetail from "../components/StoreDetail.astro";
       <div class="header-top__menu">
         <div class="header-top__menu-item"><a href="">ABOUT</a></div>
         <div class="header-top__menu-item"><a href="">NEXT EVENT</a></div>
-        <div class="header-top__menu-item"><a href="">STORE</a></div>
+        <div class="header-top__menu-item"><a href="">STORES</a></div>
         <div class="header-top__menu-item"><a href="">PARKING</a></div>
       </div>
       <!-- ハンバーガーメニュー -->
     </div>
-    <img class="header-mv" src="images/mv.jpg" alt="メイン画像" />
+
+    <div class="header-mv-field">
+      <img class="header-mv" src="images/mv.jpg" alt="メイン画像" />
+      <img class="header-mv" src="images/mv2.jpg" alt="メイン画像" />
+      <img class="header-mv" src="images/mv3.jpg" alt="メイン画像" />
+      <img class="header-mv" src="images/mv4.jpg" alt="メイン画像" />
+    </div>
+    
+
     <div class="header-overlay"></div>
     <div class="header-scrolldown"><span>Scroll</span></div>
   </header>
@@ -76,10 +84,7 @@ import StoreDetail from "../components/StoreDetail.astro";
             </p>
           </div>
         </div>
-        <StoreDetail storeInfo={}>
-
-        </StoreDetail>
-        
+        <StoreDetail />
 
         <!-- 後から消すエリア↓↓ -->
         <div class="store-block">
@@ -192,7 +197,7 @@ import StoreDetail from "../components/StoreDetail.astro";
     <div class="footer-block-nav">
       <a href="#" class="footer-block-nav__text">ABOUT</a>
       <a href="#" class="footer-block-nav__text">NEXT EVENT</a>
-      <a href="#" class="footer-block-nav__text">STORE</a>
+      <a href="#" class="footer-block-nav__text">STORES</a>
       <a href="#" class="footer-block-nav__text">PARKING</a>
     </div>
     <div class="footer-block-sns">
