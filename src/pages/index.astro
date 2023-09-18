@@ -28,7 +28,6 @@ import StoreDetail from "../components/StoreDetail.astro";
       <img class="header-mv" src="images/mv3.jpg" alt="メイン画像" />
       <img class="header-mv" src="images/mv4.jpg" alt="メイン画像" />
     </div>
-    
 
     <div class="header-overlay"></div>
     <div class="header-scrolldown"><span>Scroll</span></div>
@@ -233,4 +232,28 @@ import StoreDetail from "../components/StoreDetail.astro";
       detail.classList.remove("is-active");
     });
   </script>
+  <!-- gsapアニメーション -->
+  <script
+    is:inline
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+  ></script>
+  <script
+    is:inline
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+  ></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    const aboutBlock = document.querySelector(".about-block");
+    gsap.from(aboutBlock, {
+      autoAlpha: 0,
+      y: 5,
+      duration: 2,
+      scrollTrigger: {
+        trigger: aboutBlock,
+        start: "top 80%",
+        markers: true,
+      },
+    });
+  </script>
+  <!-- gsapアニメーション -->
 </Layout>
