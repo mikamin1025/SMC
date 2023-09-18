@@ -245,6 +245,7 @@ import StoreDetail from "../components/StoreDetail.astro";
     gsap.registerPlugin(ScrollTrigger);
     const aboutBlock = document.querySelector(".about-block");
     const eventBlock = document.querySelector(".next-event-block");
+    const storeBlocks = document.querySelectorAll(".store-block");
     gsap.from(aboutBlock, {
       autoAlpha: 0,
       y: 15,
@@ -266,6 +267,19 @@ import StoreDetail from "../components/StoreDetail.astro";
         start: "top 90%",
         // markers: true,
       },
+    });
+    storeBlocks.forEach((store, index) => {
+      gsap.from(store, {
+      autoAlpha: 0,
+      y: 15,
+      duration: 2,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: store,
+        start: "top 90%",
+        // markers: true,
+      },
+    });
     });
   </script>
   <!-- gsapアニメーション -->
