@@ -14,10 +14,10 @@ import StoreDetail from "../components/StoreDetail.astro";
         <span></span><span></span><span></span>
       </div>
       <div class="header-top__menu">
-        <div class="header-top__menu-item"><a href="">ABOUT</a></div>
-        <div class="header-top__menu-item"><a href="">NEXT EVENT</a></div>
-        <div class="header-top__menu-item"><a href="">STORES</a></div>
-        <div class="header-top__menu-item"><a href="">PARKING</a></div>
+        <div class="header-top__menu-item"><a href="#about">ABOUT</a></div>
+        <div class="header-top__menu-item"><a href="#next-event">NEXT EVENT</a></div>
+        <div class="header-top__menu-item"><a href="#store">STORES</a></div>
+        <div class="header-top__menu-item"><a href="#parking">PARKING</a></div>
       </div>
       <!-- ハンバーガーメニュー -->
     </div>
@@ -33,7 +33,7 @@ import StoreDetail from "../components/StoreDetail.astro";
     <div class="header-scrolldown"><span>Scroll</span></div>
   </header>
   <main class="main">
-    <section class="about">
+    <section id="about" class="about">
       <h2 class="about__title">ABOUT</h2>
       <div class="about-block">
         <p class="about-block__text">
@@ -50,7 +50,7 @@ import StoreDetail from "../components/StoreDetail.astro";
         />
       </div>
     </section>
-    <section class="next-event">
+    <section id="next-event" class="next-event">
       <h2>NEXT EVENT</h2>
       <div class="next-event-block">
         <span class="next-event-block__topleft"></span>
@@ -62,7 +62,7 @@ import StoreDetail from "../components/StoreDetail.astro";
         <p class="next-event-block__place">@出雲市役所芝生エリア</p>
       </div>
     </section>
-    <section class="store">
+    <section id="store" class="store">
       <h2>STORES</h2>
       <div class="store-container">
         <div class="store-block">
@@ -161,7 +161,7 @@ import StoreDetail from "../components/StoreDetail.astro";
         <!-- 後から消すエリア↑↑ -->
       </div>
     </section>
-    <section class="parking">
+    <section id="parking" class="parking">
       <h2>PARKING</h2>
       <img src="images/parking.png" alt="地図の画像" class="parking__img" />
       <div class="parking__detail">
@@ -194,10 +194,10 @@ import StoreDetail from "../components/StoreDetail.astro";
   </main>
   <footer class="footer">
     <div class="footer-block-nav">
-      <a href="#" class="footer-block-nav__text">ABOUT</a>
-      <a href="#" class="footer-block-nav__text">NEXT EVENT</a>
-      <a href="#" class="footer-block-nav__text">STORES</a>
-      <a href="#" class="footer-block-nav__text">PARKING</a>
+      <a href="#about" class="footer-block-nav__text">ABOUT</a>
+      <a href="#next-event" class="footer-block-nav__text">NEXT EVENT</a>
+      <a href="#store" class="footer-block-nav__text">STORES</a>
+      <a href="#parking" class="footer-block-nav__text">PARKING</a>
     </div>
     <div class="footer-block-sns">
       <a href="#" class="footer-block-sns__icon"
