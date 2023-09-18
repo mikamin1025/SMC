@@ -36,9 +36,10 @@ header
   display: inline-block;
   height: 50px;
   line-height: 50px;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   padding-left: 20px;
   z-index: 50;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 .header .header-top .header-top__hamburger {
   position: relative;
