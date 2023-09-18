@@ -244,14 +244,25 @@ import StoreDetail from "../components/StoreDetail.astro";
   <script>
     gsap.registerPlugin(ScrollTrigger);
     const aboutBlock = document.querySelector(".about-block");
+    const eventBlock = document.querySelector(".next-event-block");
     gsap.from(aboutBlock, {
       autoAlpha: 0,
-      y: 5,
-      duration: 2,
+      y: 15,
+      duration: 1.5,
       scrollTrigger: {
         trigger: aboutBlock,
         start: "top 80%",
-        markers: true,
+        // markers: true,
+      },
+    });
+    gsap.from(eventBlock, {
+      autoAlpha: 0,
+      y: 15,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: eventBlock,
+        start: "top 80%",
+        // markers: true,
       },
     });
   </script>
