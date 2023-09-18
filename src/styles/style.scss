@@ -10,7 +10,7 @@ header
     position: fixed;
     display: flex;
     justify-content: space-between;
-    z-index: 40;
+    z-index: 50;
 
     & .header-top__title {
       display: inline-block;
@@ -18,6 +18,7 @@ header
       line-height: 50px;
       font-size: 1.3rem;
       padding-left: 20px;
+      z-index: 50;
     }
 
     /*========= レイアウトのためのCSS ===============*/
@@ -29,7 +30,7 @@ header
       width: 70px;
       height: 50px;
       border-radius: 5px;
-      z-index: 40;
+      z-index: 60;
 
       /*ボタン内側*/
       & span {
@@ -82,13 +83,13 @@ header
 
     /*========= レイアウトのためのCSS ===============*/
     /*----------------------------
-* メニュー本体
-*----------------------------*/
+    * メニュー本体
+    *----------------------------*/
     & .header-top__menu {
       position: fixed;
       top: 0;
       right: 0;
-      z-index: 20;
+      z-index: 55;
       width: 100vw;
       height: 100vh;
       display: flex;
@@ -115,8 +116,8 @@ header
     }
 
     /*----------------------------
-* アニメーション部分
-*----------------------------*/
+    * アニメーション部分
+    *----------------------------*/
 
     /* アニメーション前のメニューの状態 */
     & .header-top__menu {
@@ -208,7 +209,7 @@ header
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 20;
+    z-index: 10;
     background: linear-gradient(to bottom, transparent 0%, transparent 70%, #ede3da 100%)
   }
 
@@ -481,7 +482,7 @@ main
       position: fixed;
       top: 0;
       right: 0;
-      z-index: 20;
+      z-index: 100;
       width: 100vw;
       height: 100vh;
       display: flex;

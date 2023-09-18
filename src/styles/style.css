@@ -16,7 +16,7 @@ header
   position: fixed;
   display: flex;
   justify-content: space-between;
-  z-index: 40;
+  z-index: 50;
   /*========= レイアウトのためのCSS ===============*/
   /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
   /*========= レイアウトのためのCSS ===============*/
@@ -34,6 +34,7 @@ header
   line-height: 50px;
   font-size: 1.3rem;
   padding-left: 20px;
+  z-index: 50;
 }
 .header .header-top .header-top__hamburger {
   position: relative;
@@ -42,7 +43,7 @@ header
   width: 70px;
   height: 50px;
   border-radius: 5px;
-  z-index: 40;
+  z-index: 60;
   /*ボタン内側*/
   /*activeクラスが付与されると線が回転して×になる*/
 }
@@ -87,7 +88,7 @@ header
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 20;
+  z-index: 55;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -171,7 +172,7 @@ header
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 20;
+  z-index: 10;
   background: linear-gradient(to bottom, transparent 0%, transparent 70%, #ede3da 100%);
 }
 .header .header-scrolldown {
@@ -401,7 +402,7 @@ main
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 20;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   display: flex;
