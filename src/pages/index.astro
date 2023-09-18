@@ -228,7 +228,8 @@ import StoreDetail from "../components/StoreDetail.astro";
         detail.classList.add("is-active");
       });
     });
-    back.addEventListener("click", () => {
+    // back or detailをトリガーにする
+    detail.addEventListener("click", () => {
       detail.classList.remove("is-active");
     });
   </script>
