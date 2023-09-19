@@ -1,6 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import StoreDetail from "../components/StoreDetail.astro";
+import {getEventDate} from "../libs/microcms";
+
+
+//microCMSの呼び出し（開催日情報）
+const response = await getEventDate({});
+
+
 ---
 
 <Layout title="SUNDAY MARKET CiBO">
@@ -15,7 +22,9 @@ import StoreDetail from "../components/StoreDetail.astro";
       </div>
       <div class="header-top__menu">
         <div class="header-top__menu-item"><a href="#about">ABOUT</a></div>
-        <div class="header-top__menu-item"><a href="#next-event">NEXT EVENT</a></div>
+        <div class="header-top__menu-item">
+          <a href="#next-event">NEXT EVENT</a>
+        </div>
         <div class="header-top__menu-item"><a href="#store">STORES</a></div>
         <div class="header-top__menu-item"><a href="#parking">PARKING</a></div>
       </div>
@@ -83,6 +92,7 @@ import StoreDetail from "../components/StoreDetail.astro";
             </p>
           </div>
         </div>
+
         <StoreDetail />
 
         <!-- 後から消すエリア↓↓ -->
@@ -242,46 +252,7 @@ import StoreDetail from "../components/StoreDetail.astro";
     is:inline
     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
   ></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-    const aboutBlock = document.querySelector(".about-block");
-    const eventBlock = document.querySelector(".next-event-block");
-    const storeBlocks = document.querySelectorAll(".store-block");
-    gsap.from(aboutBlock, {
-      autoAlpha: 0,
-      y: 15,
-      duration: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: aboutBlock,
-        start: "top 90%",
-        // markers: true,
-      },
-    });
-    gsap.from(eventBlock, {
-      autoAlpha: 0,
-      y: 15,
-      duration: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: eventBlock,
-        start: "top 90%",
-        // markers: true,
-      },
-    });
-    storeBlocks.forEach((store, index) => {
-      gsap.from(store, {
-      autoAlpha: 0,
-      y: 15,
-      duration: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: store,
-        start: "top 90%",
-        // markers: true,
-      },
-    });
-    });
-  </script>
+  <script src="../js/app"></script>
+
   <!-- gsapアニメーション -->
 </Layout>
