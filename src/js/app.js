@@ -10,7 +10,7 @@ gsap.from(aboutBlock, {
   ease: "power1.inOut",
   scrollTrigger: {
     trigger: aboutBlock,
-    start: "top 90%",
+    start: "top 80%",
     // markers: true,
   },
 });
@@ -21,7 +21,7 @@ gsap.from(eventBlock, {
   ease: "power1.inOut",
   scrollTrigger: {
     trigger: eventBlock,
-    start: "top 90%",
+    start: "top 80%",
     // markers: true,
   },
 });
@@ -33,7 +33,7 @@ storeBlocks.forEach((store, index) => {
     ease: "power1.inOut",
     scrollTrigger: {
       trigger: store,
-      start: "top 90%",
+      start: "top 80%",
       // markers: true,
     },
   });
