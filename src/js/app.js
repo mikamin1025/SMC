@@ -11,7 +11,7 @@ gsap.from(aboutBlock, {
   scrollTrigger: {
     trigger: aboutBlock,
     start: "top 80%",
-    // markers: true,
+    markers: true,
   },
 });
 gsap.from(eventBlock, {
