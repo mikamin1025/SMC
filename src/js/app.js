@@ -10,8 +10,8 @@ gsap.from(aboutBlock, {
   ease: "power1.inOut",
   scrollTrigger: {
     trigger: aboutBlock,
-    start: "top 90%",
-    // markers: true,
+    start: "top 20%",
+    markers: true,
   },
 });
 gsap.from(eventBlock, {
