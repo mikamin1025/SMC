@@ -3,10 +3,11 @@ gsap.registerPlugin(ScrollTrigger);
 const aboutBlock = document.querySelector(".about-block");
 const eventBlock = document.querySelector(".next-event-block");
 const storeBlocks = document.querySelectorAll(".store-block");
+
 gsap.from(aboutBlock, {
   autoAlpha: 0,
-  y: 15,
-  duration: 1,
+  y: 30,
+  duration: 1.5,
   ease: "power1.inOut",
   scrollTrigger: {
     trigger: aboutBlock,
@@ -16,8 +17,8 @@ gsap.from(aboutBlock, {
 });
 gsap.from(eventBlock, {
   autoAlpha: 0,
-  y: 15,
-  duration: 1,
+  y: 30,
+  duration: 1.5,
   ease: "power1.inOut",
   scrollTrigger: {
     trigger: eventBlock,
@@ -28,8 +29,8 @@ gsap.from(eventBlock, {
 storeBlocks.forEach((store, index) => {
   gsap.from(store, {
     autoAlpha: 0,
-    y: 15,
-    duration: 1,
+    y: 30,
+    duration: 1.5,
     ease: "power1.inOut",
     scrollTrigger: {
       trigger: store,

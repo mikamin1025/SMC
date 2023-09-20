@@ -453,6 +453,7 @@ main
         width: 90%;
         height: 100px;
         object-fit: cover;
+        background-position: center center;
         border-radius: $border-radius;
       }
 
@@ -482,8 +483,8 @@ main
     }
 
     /*----------------------------
-* 店舗詳細画面
-*----------------------------*/
+    * 店舗詳細画面
+    *----------------------------*/
     & .store-detail {
       position: fixed;
       top: 0;
@@ -506,6 +507,7 @@ main
         & .store-detail__title {
           font-size: 1.5rem;
           margin-top: 20px;
+          font-family: 'PT Sans Narrow', sans-serif;
         }
 
         & .store-detail-back {
@@ -517,6 +519,7 @@ main
           width: 100%;
           max-height: 50vh;
           object-fit: cover;
+          background-position: center center;
           border-radius: 20px;
         }
 

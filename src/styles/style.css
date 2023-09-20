@@ -385,6 +385,7 @@ main
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+  background-position: center center;
   border-radius: 20px;
 }
 .main .store .store-block .store-block__body {
@@ -427,6 +428,7 @@ main
 .main .store .store-detail .store-detail-block .store-detail__title {
   font-size: 1.5rem;
   margin-top: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 .main .store .store-detail .store-detail-block .store-detail-back {
   padding-top: 10px;
@@ -437,6 +439,7 @@ main
   max-height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
+  background-position: center center;
   border-radius: 20px;
 }
 .main .store .store-detail .store-detail-block .store-detail__name {
