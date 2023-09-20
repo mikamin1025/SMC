@@ -1,4 +1,4 @@
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const aboutBlock = document.querySelector(".about-block");
 const eventBlock = document.querySelector(".next-event-block");
@@ -11,7 +11,7 @@ gsap.from(aboutBlock, {
   scrollTrigger: {
     trigger: aboutBlock,
     start: "top 90%",
-    markers: true,
+    // markers: true,
   },
 });
 gsap.from(eventBlock, {
