@@ -4,7 +4,7 @@ import StoreDetail from "../components/StoreDetail.astro";
 
 import { getEventDate } from "../libs/microcms";
 //microCMSの呼び出し（idとtitleを取得する）
-const eventDate = await getEventDate();
+const eventDate = await getEventDate({});
 
 // ■変数
 // 曜日を表す文字列の配列を作っておく
