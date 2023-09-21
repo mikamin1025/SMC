@@ -1,6 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import StoreDetail from "../components/StoreDetail.astro";
+
+import { getEventDate } from "../libs/microcms";
+//microCMSの呼び出し（idとtitleを取得する）
+const eventDate = await getEventDate({});
+
+// ■変数
+// 曜日を表す文字列の配列を作っておく
+var WeekChars = ["sun", "mon", "the", "wed", "thu", "fri", "sat"];
 ---
 
 <Layout title="SUNDAY MARKET CiBO">
@@ -65,9 +73,28 @@ import StoreDetail from "../components/StoreDetail.astro";
         <span class="next-event-block__topright"></span>
         <span class="next-event-block__bottomright"></span>
         <span class="next-event-block__bottomleft"></span>
-        <p class="next-event-block__day">2023.10.25 wed</p>
-        <p class="next-event-block__time">10:00-17:00</p>
-        <p class="next-event-block__place">@出雲市役所芝生エリア</p>
+        <!-- <p class="next-event-block__day">2023.10.25 wed</p> -->
+        <p class="next-event-block__day">
+          {new Date(eventDate.contents[0].start_date).getUTCFullYear()}.{
+            new Date(eventDate.contents[0].start_date).getUTCMonth() + 1
+          }.{new Date(eventDate.contents[0].start_date).getUTCDate()}&nbsp;{
+            WeekChars[new Date(eventDate.contents[0].start_date).getDay()]
+          }
+        </p>
+        <p class="next-event-block__time">
+          {new Date(eventDate.contents[0].start_date).getUTCHours() + 9}&#058;{
+            (
+              "0" + new Date(eventDate.contents[0].start_date).getUTCMinutes()
+            ).slice(-2)
+          }&mdash;{
+            new Date(eventDate.contents[0].end_date).getUTCHours() + 9
+          }&#058;{
+            (
+              "0" + new Date(eventDate.contents[0].end_date).getUTCMinutes()
+            ).slice(-2)
+          }
+        </p>
+        <p class="next-event-block__place">{eventDate.contents[0].place}</p>
       </div>
     </section>
     <section id="store" class="store">
