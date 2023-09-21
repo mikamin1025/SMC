@@ -8,7 +8,7 @@ gsap.from(aboutBlock, {
   autoAlpha: 0,
   y: 30,
   duration: 1.5,
-  ease: "power1.inOut",
+  // ease: "power1.inOut",
   scrollTrigger: {
     trigger: aboutBlock,
     start: "top 90%",
@@ -19,7 +19,7 @@ gsap.from(eventBlock, {
   autoAlpha: 0,
   y: 30,
   duration: 1.5,
-  ease: "power1.inOut",
+  // ease: "power1.inOut",
   scrollTrigger: {
     trigger: eventBlock,
     start: "top 90%",
@@ -31,7 +31,7 @@ storeBlocks.forEach((store, index) => {
     autoAlpha: 0,
     y: 30,
     duration: 1.5,
-    ease: "power1.inOut",
+    // ease: "power1.inOut",
     scrollTrigger: {
       trigger: store,
       start: "top 90%",
