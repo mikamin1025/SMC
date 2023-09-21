@@ -6,6 +6,6 @@ const client = createClient({
 });
 
 //APIの呼び出し
-export const getEventDate = async (queries: MicroCMSQueries) => {
+export const getEventDate = async (queries?: MicroCMSQueries) => {
   return await client.get({ endpoint: "event_date", queries });
 };
